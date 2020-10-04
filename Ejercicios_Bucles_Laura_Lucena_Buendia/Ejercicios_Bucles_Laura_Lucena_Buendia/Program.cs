@@ -50,7 +50,7 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
 
                 } while (!es_numero);
 
-                //SWITCH (Dependiendo de lo que hayamos introducido hará un ejercicio u otro)
+                //SWITCH (Dependiendo de lo que hayamos introducido hará un ejercicio o saldrá de aplicación)
                 switch (numeroOpcionMenu)
                 {
                     case 1:
@@ -65,8 +65,8 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
                     case 2:
                         Console.WriteLine("\nEj2. Clave");
                         clave_de_Usuario();
-                        // comentario personal: Realizarlo la próxima vez con '.remove()'
                         pulsarParaSeguir();
+                        // comentario personal: Realizarlo la próxima vez con '.remove()'
                         break;
 
                     case 3:
@@ -88,6 +88,7 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
                     case 5:
                         menuPrincipal = false;
                         Console.WriteLine("\nHasta pronto");
+                        Console.ReadLine();
                         break;
 
                     default:
@@ -100,9 +101,22 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
         }
 
 
+        //-----------------------
+        // MÉTODOS DEL PROGRAMA
+        //-----------------------
 
-        //Métodos
-        //Crear factorial
+
+        /// <summary>
+        /// Método que nos calcula el factorial de un número entero
+        /// En nuestra valiable local resultado se nos almacenará el valor del número que le hemos pasado por parámetros
+        /// Nuestro bucle for ira con su variable inicializada 'i' multiplicandose con la variable 'resultado'
+        /// hasta que no sea menor que el valor de  'num'
+        /// 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns>
+        /// Nos devolverá el resultado de dicha multiplicación
+        /// </returns>
         public static int calculoFactorial(int num)
         {
             int resultado = num;
@@ -115,8 +129,37 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
 
 
         //Clave de usuario
+        /// <summary>
+        /// CLAVE DE USUARIO
+        /// El método nos leerá uno por uno los caracteres que vayamos introduciendo y se irán sumando a nuestra
+        /// variable de tipo 'String' - 'pass'
+        /// En el momento que insertemos el símbolo '*'
+        /// se nos mostrarán todos los caracteres que hemos introducido como clave
+        /// </summary>
         private static void clave_de_Usuario()
         {
+            Boolean presionarAsterisco = false;
+            char tecla;
+            String pass = "";
+
+            Console.WriteLine("Inserte una clave. El símbolo '*' indicará el final de esta");
+            do
+            {
+                //Leemos sólo un caracter
+                tecla = Console.ReadKey(false).KeyChar;
+
+                if (tecla == '*')
+                {
+                    presionarAsterisco = true;
+                }
+                else
+                    pass += tecla;
+
+            } while (!presionarAsterisco);
+            Console.WriteLine("La contraseña es '" + pass + "'");
+
+            /*
+             //Opción incorrecta
             String clave = "";
             String claveGuardada = "";
 
@@ -130,11 +173,17 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
                 else
                     Console.WriteLine("La clave es '" + claveGuardada + "'");
 
-            } while (clave != "*");
-            
+            } while (clave != "*");             
+             */        
         }
 
-        //Mostrar 'x' Numeros primos
+
+        /// <summary>
+        /// MOSTRAR LOS 'X' PRIMEROS NÚMEROS PRIMOS
+        /// El método recibe un número entero, introducido previamente por teclado
+        /// en el que a través de varios bucles 'for' y una serie de condiciones
+        /// </summary>
+        /// <param name="numPrimos"></param>
         private static void encontrarNumerosPrimos(int numPrimos)
         {
             int contadorNumPrimos = 0;
@@ -148,7 +197,7 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
                     Console.WriteLine(contadorNumPrimos + " => " + num);
 
                 }
-                //Empezamos a recorrer
+                //Empezamos a recorrer los 'x' números restantes
                 else
                 {
                     Boolean esPrimo = true;
@@ -156,7 +205,6 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
                     {
                         if (num % divisor == 0)
                             esPrimo = false;
-                        //Console.Write(num + " " + divisor);
                     }
 
                     if (esPrimo)
@@ -169,7 +217,13 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
         }
 
 
-        //Abecedario inverso
+       
+        /// <summary>
+        /// ABECEDARIO INVERSO
+        /// Método en el que usamos un 'casteo' para poder sacar las letras del abecedario en mayúsculas utilizando el código ascii
+        /// Deberán estar ordenadas a la inversa (Z-A)
+        /// Debemos conocer previamente los números a los que corresponden y hacer una cuenta atrás
+        /// </summary>
         private static void mayusculasDescendentes()
         {
             for (int letra = 90; letra >= 65; letra--)
@@ -180,7 +234,13 @@ namespace Ejercicios_Bucles_Laura_Lucena_Buendia
 
 
         // Función para resetear el menu
-        private static void pulsarParaSeguir()
+       /// <summary>
+       /// FUNCIÓN PARA RESETEAR EL MENÚ
+       /// Tal y como se nos muestra en el ejercicio
+       /// Cada vez que se haya terminado de ejecutar un opción el programa dejará 3 líneas en blanco con un mensaje.
+       /// En el momento que se pulse 'intro' volveremos al menú principal
+       /// </summary>
+       private static void pulsarParaSeguir()
         {
             Console.WriteLine("\n\n\n ----- Pulse para seguir -----");
             Console.ReadKey();

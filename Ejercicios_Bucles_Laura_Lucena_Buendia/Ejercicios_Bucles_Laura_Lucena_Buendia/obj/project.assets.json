@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\INFORMATICA\\2DAM\\C#\\1TRIM\\Ejercicios\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia.csproj",
+      "projectUniqueName": "C:\\Users\\laura\\OneDrive\\Escritorio\\DI_EjerciciosConsola1_2020\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia.csproj",
       "projectName": "Ejercicios_Bucles_Laura_Lucena_Buendia",
-      "projectPath": "D:\\INFORMATICA\\2DAM\\C#\\1TRIM\\Ejercicios\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia.csproj",
+      "projectPath": "C:\\Users\\laura\\OneDrive\\Escritorio\\DI_EjerciciosConsola1_2020\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia.csproj",
       "packagesPath": "C:\\Users\\laura\\.nuget\\packages\\",
-      "outputPath": "D:\\INFORMATICA\\2DAM\\C#\\1TRIM\\Ejercicios\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\obj\\",
+      "outputPath": "C:\\Users\\laura\\OneDrive\\Escritorio\\DI_EjerciciosConsola1_2020\\Ejercicios_Bucles_Laura_Lucena_Buendia\\Ejercicios_Bucles_Laura_Lucena_Buendia\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
